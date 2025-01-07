@@ -4,28 +4,28 @@
         <div class="row  mb-3">
             <label for="name" class="form-label col-1">Nome</label>
             <div class="col-5">
-                <input type="text" class="form-control" name="name" id="name" required>
+                <input type="text" class="form-control" [(ngModel)]="car.name" name="name" id="name" required>
             </div>
         </div>
         <div class="row mb-3">
             <label for="maker" class="form-label col-1">Montadora</label>
             <div class="col-5 justify-content-left ">
-                <input type="text" class="form-control" name="maker" id="maker" required>
+                <input type="text" class="form-control"[(ngModel)]="car.maker" name="maker" id="maker" required>
             </div>
         </div>
         <div class="row ">
             <label for="price" class="form-label col-1">Preço</label>
             <div class="col-5 justify-content-left">
-                <input type="text" class="form-control" name="price" id="price" required>
+                <input type="text" class="form-control" [(ngModel)]="car.price" name="price" id="price" required>
             </div>
             <label for="year" class="form-label col-1 text-end">Ano</label>
             <div class="col-5 justify-content-left">
-                <input type="text" class="form-control" name="year" id="year" required>
+                <input type="text" class="form-control" [(ngModel)]="car.year" name="year" id="year" required>
             </div>
         </div>
         <div class="row mt-3">
             <div>
-                <button class="btn btn-primary justify-content-left">Salvar</button>
+                <button (click)="save()" class="btn btn-primary justify-content-left">Salvar</button>
             </div>
     
         </div>

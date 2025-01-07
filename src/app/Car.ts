@@ -1,4 +1,4 @@
-export interface Cars{
+export interface Car{
     id:number;
     name:string;
     maker:string;
