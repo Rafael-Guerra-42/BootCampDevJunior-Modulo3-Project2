@@ -9,14 +9,27 @@ import {Car} from '../../Car'
 })
 export class CarsComponent {
   car: Car = {} as Car;
-  idCount = 1
+  idCount : number= 1;
+  isUpdate :boolean = false;
   cars: Car[] =[
 
   ];
   saveCar(){
-    this.car.id = this.idCount;
-    this.idCount++;
-    this.cars.push(this.car)
+    if(!this.isUpdate){
+      this.car.id = this.idCount;
+      this.idCount++;
+      this.cars.push(this.car);
+      this.car = {} as Car;
+    }
     this.car = {} as Car;
+    this.isUpdate=false;
+
+  }
+  update(car:Car){
+    this.car = car;
+    this.isUpdate=true;
+  }
+  remove(car:Car){
+    this.cars = this.cars.filter(c => c !=car);
   }
 }

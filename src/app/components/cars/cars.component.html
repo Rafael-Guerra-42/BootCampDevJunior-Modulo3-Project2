@@ -1,5 +1,5 @@
 <app-car [car]="car" (saveEmiter)="saveCar()"></app-car>
-<div class="container">
+<div class="container bg-light">
     <h3>Carros Cadastrados</h3>
     <table class="table">
         <thead>
@@ -20,8 +20,8 @@
               <td>{{car.price}} </td>  
               <td>{{car.year}} </td>  
               <td class="text-end">
-                <button class="btn btn-succes me-2">Alterar</button>
-                <button class="btn btn-danger">Remover</button>
+                <button class="btn btn-success me-2"(click)="update(car)">Alterar</button>
+                <button class="btn btn-danger"(click)="remove(car)">Remover</button>
               </td>
             </tr>
         </tbody>
